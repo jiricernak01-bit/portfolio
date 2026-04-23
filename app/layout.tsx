@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Geist, Poppins, Lato } from "next/font/google";
 import "./globals.css";
 
 const geist = Geist({
@@ -7,16 +7,28 @@ const geist = Geist({
   subsets: ["latin"],
 });
 
+const poppins = Poppins({
+  variable: "--font-poppins",
+  subsets: ["latin"],
+  weight: ["700", "800", "900"],
+});
+
+const lato = Lato({
+  variable: "--font-lato",
+  subsets: ["latin"],
+  weight: ["400", "700", "900"],
+});
+
 export const metadata: Metadata = {
-  title: "Jiri Cernak — Portfolio",
-  description: "Personal portfolio of Jiri Cernak",
+  title: "OptiGrow — Digital Marketing Agency",
+  description: "Complex digital services by OptiGrow",
 };
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${geist.variable} scroll-smooth`}>
+    <html lang="en" className={`${geist.variable} ${poppins.variable} ${lato.variable} scroll-smooth`}>
       <body className="min-h-screen bg-white text-zinc-900 antialiased dark:bg-zinc-950 dark:text-zinc-100">
         {children}
       </body>

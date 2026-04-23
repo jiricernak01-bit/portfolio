@@ -34,7 +34,7 @@ export default function Services() {
   }, [])
 
   return (
-    <div ref={wrapperRef} className="relative" style={{ height: '250vh' }}>
+    <div id="services" ref={wrapperRef} className="relative" style={{ height: '250vh' }}>
       <div className="sticky top-0 h-screen overflow-hidden bg-white dark:bg-zinc-950">
 
         {/* Single big box */}
