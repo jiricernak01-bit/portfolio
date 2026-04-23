@@ -14,13 +14,13 @@ export default function Hero() {
 
         <h1 className="mb-8 text-5xl font-bold leading-tight tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-6xl">
           This is
-          <span className="mt-3 block">
+          <span className="block">
             <Image
               src="/optigrow-logo.png"
               alt="OptiGrow"
-              width={320}
-              height={100}
-              className="h-auto w-64 sm:w-80 object-contain"
+              width={960}
+              height={300}
+              className="h-auto w-full object-contain object-left"
               priority
             />
           </span>
@@ -79,17 +79,9 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Right — logo display */}
-      <div className="flex flex-1 items-center justify-center">
-        <div className="relative flex aspect-square w-full max-w-sm items-center justify-center rounded-3xl bg-gradient-to-br from-indigo-50 to-violet-50 p-12 shadow-xl ring-1 ring-indigo-100 dark:from-indigo-950/40 dark:to-violet-950/40 dark:ring-indigo-900/50">
-          <Image
-            src="/optigrow-logo.png"
-            alt="OptiGrow logo"
-            width={400}
-            height={400}
-            className="h-auto w-full object-contain drop-shadow-sm"
-          />
-        </div>
+      {/* Right — decorative translucent block */}
+      <div className="hidden md:flex flex-1 self-stretch items-stretch py-4">
+        <div className="w-full rounded-3xl bg-indigo-500/10 backdrop-blur-sm ring-1 ring-indigo-200/60 dark:bg-indigo-400/10 dark:ring-indigo-400/20" />
       </div>
     </section>
   );
