@@ -23,18 +23,12 @@ export default function Hero() {
     transition: 'transform 0.75s cubic-bezier(0.4,0,0.2,1), opacity 0.5s ease',
   }
 
-  const rightStyle: React.CSSProperties = {
-    transform: split ? 'translateX(110vw)' : 'translateX(0)',
-    opacity: split ? 0 : 1,
-    transition: 'transform 0.75s cubic-bezier(0.4,0,0.2,1), opacity 0.5s ease',
-  }
-
   return (
     <section id="about" className="overflow-hidden">
-      <div className="mx-auto flex min-h-screen max-w-6xl flex-col items-center justify-center gap-16 px-6 pt-24 pb-16 md:flex-row">
+      <div className="mx-auto flex min-h-screen max-w-6xl flex-col items-center justify-center px-6 pt-24 pb-16">
 
-        {/* Left — text content */}
-        <div className="flex-1" style={leftStyle}>
+        {/* Text content */}
+        <div className="w-full" style={leftStyle}>
           <p className="mb-5 text-sm font-medium uppercase tracking-widest text-indigo-500 dark:text-indigo-400">
             Digital marketing agency
           </p>
@@ -97,11 +91,6 @@ export default function Hero() {
               </svg>
             </a>
           </div>
-        </div>
-
-        {/* Right — decorative translucent block */}
-        <div className="hidden md:flex flex-1 self-stretch items-stretch py-4" style={rightStyle}>
-          <div className="w-full rounded-3xl bg-indigo-500/10 backdrop-blur-sm ring-1 ring-indigo-200/60 dark:bg-indigo-400/10 dark:ring-indigo-400/20" />
         </div>
 
       </div>
